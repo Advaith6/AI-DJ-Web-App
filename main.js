@@ -49,11 +49,11 @@ function draw() {
 
     if (scoreLeftWrist > 0.2) {
         circle(leftWristX, leftWristY, 20);
-        remove_Decimals = floor(InNumberleftWristY);
-        leftWristY_divide_1000 = remove_decimals / 1000;
-        volume = leftWristY_divide_1000 * 2;
-        document.getElementById("volume").innerHTML = "Volume = " + volume;
-        song.setVolume(volume);
+        InNumberleftWristY = Number(leftWristY);
+        new_leftWristY = floor(InNumberleftWristY * 2);
+        leftWristY_divide_1000 = new_leftWristY / 1000;
+        document.getElementById("volume").innerHTML = "Volume = " + leftWristY_divide_1000;
+        song.setVolume(leftWristY_divide_1000);
     }
 }
 
